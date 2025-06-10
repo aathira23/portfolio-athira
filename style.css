@@ -14,7 +14,7 @@ header {
   background-color: #000000;
   color: white;
   padding: 2rem 1rem;
-  text-align: center;
+  text-align: justify;
 }
 
 .profile-pic {
@@ -31,17 +31,17 @@ header {
   justify-content: center;
   flex-wrap: wrap;          /* Allows wrapping on smaller screens */
   gap: 2rem;                /* Controls spacing between image and text */
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 
 .profile-text {
-  text-align: center;      
+  text-align: left;      
 }
 
 
 nav {
   display: flex;
-  gap:3.5rem;
+  gap:5rem;
   justify-content: center;
   background-color: #000000;
 }
