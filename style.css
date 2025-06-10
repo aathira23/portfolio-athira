@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
   margin: 0;
   padding: 0;
   background-color: #fdfdfd;
@@ -10,7 +13,7 @@ body {
 header {
   background-color: #000000;
   color: white;
-  padding: 1.5rem;
+  padding: 2rem 1rem;
   text-align: center;
 }
 
@@ -22,45 +25,79 @@ nav {
 
 nav a {
   color: white;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
   background-color: #2361b1;
+  color: #ffffff;
 }
 
 .section {
-  padding: 2rem;
+  padding: 3rem 1.5rem;
   max-width: 1000px;
   margin: auto;
 }
 
 .section-title {
   font-weight: 600;
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
   border-left: 4px solid #2361b1;
-  padding-left: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  letter-spacing: 0.5px;
 }
 
 .skills-list,
-.project-list,
-.contact-list {
+.project-list {
   list-style: none;
   padding: 0;
 }
 
 .skills-list li,
-.project-list li,
-.contact-list li {
-  margin-bottom: 0.5rem;
+.project-list li {
+  margin-bottom: 1rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: #0d1368;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #2361b1;
+}
+
+.contact-center {
+  justify-content: center;
+  margin: auto;
+  text-align: center;
 }
 
 footer {
   background-color: #000000;
   color: white;
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem;
+  font-size: 14px;
 }
