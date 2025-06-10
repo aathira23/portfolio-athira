@@ -59,12 +59,23 @@ nav a:hover {
   color: #ffffff;
 }
 
+#about {
+  margin-top: 6rem;             /* Push the entire section box down */
+  scroll-margin-top: 6rem;      /* Ensure anchor scroll stops below navbar */
+}
+
 .section {
   background-color: #f9f9f9;   /* Light grey background to break the whitespace */
-  padding: 2rem 1rem;          /* Slightly reduced padding */
-  border-radius: 8px;          /* Soft rounded corners */
+  padding: 2rem 1rem;         
+  border-radius: 8px;         
   max-width: 900px;
   margin: 0 auto 2rem;         /* Adds space between sections */
+  box-shadow: 0 2px 8px #0b111a;   
+  transition: box-shadow 0.3s ease;
+}
+
+.section:hover {
+  box-shadow: 0 4px 12px #0b111a;   
 }
 
 
@@ -126,6 +137,7 @@ nav a:hover {
 }
 
 .project-details {
+  text-align: justify;
   display: none;
   padding-left: 1rem;
   margin-top: 0.25rem;
@@ -145,22 +157,13 @@ footer {
   font-size: 14px;
 }
 
-/* Top-centered contact item (Email) */
-footer .contact-center {
+footer .contact-row {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Grid for bottom row (LinkedIn + GitHub) */
-footer .contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  max-width: 600px;
-  margin: 0 auto 1.5rem auto;
+  flex-wrap: wrap; /* Ensures it stacks on small screens */
+  gap: 3rem;
+  margin-bottom: 1rem;
 }
 
 footer .contact-item {
@@ -175,6 +178,7 @@ footer .contact-item a {
   text-decoration: none;
   transition: color 0.3s ease;
 }
+
 
 footer .contact-item a:hover {
   color: #2361b1;
@@ -217,3 +221,17 @@ footer .contact-item a {
   display: inline-block;
 }
 
+@media (max-width: 600px) {
+  .section {
+    padding: 1.5rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
