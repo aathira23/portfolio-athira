@@ -50,6 +50,22 @@ nav a:hover {
   padding-left: 0.75rem;
   letter-spacing: 0.5px;
 }
+/* Zoom animation for section headings */
+@keyframes zoomOnly {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.section-title {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.section-title.flash {
+  animation: zoomOnly 0.4s ease-in-out;
+}
+
 
 .skills-list,
 .project-list {
@@ -62,42 +78,57 @@ nav a:hover {
   margin-bottom: 1rem;
 }
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  max-width: 600px;
-  margin: auto;
-  margin-bottom: 2rem;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1rem;
-}
-
-.contact-item a {
-  text-decoration: none;
-  color: #0d1368;
-  transition: color 0.3s ease;
-}
-
-.contact-item a:hover {
-  color: #2361b1;
-}
-
-.contact-center {
-  justify-content: center;
-  margin: auto;
-  text-align: center;
-}
-
 footer {
   background-color: #000000;
   color: white;
   text-align: center;
-  padding: 1.5rem;
+  padding: 2rem 1rem;
   font-size: 14px;
 }
+
+/* Top-centered contact item (Email) */
+footer .contact-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Grid for bottom row (LinkedIn + GitHub) */
+footer .contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto;
+}
+
+footer .contact-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+footer .contact-item a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer .contact-item a:hover {
+  color: #2361b1;
+}
+
+/* Soft glow animation for footer (Contact section) */
+@keyframes footerFade {
+  0%   { background-color: #1c3e66; }
+  100% { background-color: #000000; }
+}
+
+footer.glow {
+  animation: footerFade 1s ease-in-out;
+}
+
+
