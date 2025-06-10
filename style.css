@@ -17,8 +17,31 @@ header {
   text-align: center;
 }
 
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+}  
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;          /* Allows wrapping on smaller screens */
+  gap: 2rem;                /* Controls spacing between image and text */
+  padding: 1rem 0;
+}
+
+.profile-text {
+  text-align: center;      
+}
+
+
 nav {
   display: flex;
+  gap:3.5rem;
   justify-content: center;
   background-color: #000000;
 }
@@ -37,10 +60,13 @@ nav a:hover {
 }
 
 .section {
-  padding: 3rem 1.5rem;
-  max-width: 1000px;
-  margin: auto;
+  background-color: #f9f9f9;   /* Light grey background to break the whitespace */
+  padding: 2rem 1rem;          /* Slightly reduced padding */
+  border-radius: 8px;          /* Soft rounded corners */
+  max-width: 900px;
+  margin: 0 auto 2rem;         /* Adds space between sections */
 }
+
 
 .section-title {
   font-weight: 600;
@@ -50,32 +76,65 @@ nav a:hover {
   padding-left: 0.75rem;
   letter-spacing: 0.5px;
 }
-/* Zoom animation for section headings */
-@keyframes zoomOnly {
-  0%   { transform: scale(1); }
-  50%  { transform: scale(1.08); }
-  100% { transform: scale(1); }
+
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  text-align: left; /* ensures left alignment */
 }
 
-.section-title {
-  display: inline-block;
-  transition: transform 0.3s ease-in-out;
+.skills-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.section-title.flash {
-  animation: zoomOnly 0.4s ease-in-out;
+.skills-list .label {
+  min-width: 170px; /* ensures labels align neatly */
+  font-weight: 600;
+  text-align: right;
+}
+
+.skills-list .italic {
+  font-style: italic;
+  font-weight: normal; /* ensures it's NOT bold */
 }
 
 
-.skills-list,
 .project-list {
   list-style: none;
   padding: 0;
+  text-align: left;
 }
 
-.skills-list li,
 .project-list li {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+.project-toggle {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  text-decoration: underline;
+  color: #0d1368;
+}
+
+.project-details {
+  display: none;
+  padding-left: 1rem;
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.project-item.active .project-details {
+  display: block;
 }
 
 footer {
@@ -121,6 +180,23 @@ footer .contact-item a:hover {
   color: #2361b1;
 }
 
+
+/* Zoom animation for section headings */
+@keyframes zoomOnly {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.section-title {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.section-title.flash {
+  animation: zoomOnly 0.4s ease-in-out;
+}
+
 /* Soft glow animation for footer (Contact section) */
 @keyframes footerFade {
   0%   { background-color: #1c3e66; }
@@ -131,4 +207,13 @@ footer.glow {
   animation: footerFade 1s ease-in-out;
 }
 
+
+/* Fix link wrapping issue in footer */
+footer .contact-item a {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+  text-align: center;
+  display: inline-block;
+}
 
