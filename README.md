@@ -5,15 +5,21 @@ Welcome to my personal portfolio website
 This portfolio highlights my background, skills, and projects as a recent graduate in Electronics and Communication Engineering. 
 It serves as a platform to showcase the work I've done and the journey I'm on as I begin my career in the tech world.
 
-## 🛠️ Built With
+## Built With
 - HTML5
 - CSS3
 - JavaScript
+- Font Awesome
 - GitHub Pages (for deployment)
 
-## ✨Features
+## Features
 - Built using HTML, CSS, and JavaScript
 - Responsive & Interactive Layout
 - Project section with detailed previews
 - Smooth UI transitions and navigation
 - Clickable contact links (email, GitHub, LinkedIn)
+
+ ## Connect With Me
+- Email: athira200123ak@gmail.com
+- LinkedIn: linkedin.com/in/athira-ak
+- GitHub: github.com/aathira23
