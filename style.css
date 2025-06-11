@@ -63,6 +63,7 @@ nav a:hover {
 #about {
   margin-top: 6rem;             /* Push the entire section box down */
   scroll-margin-top: 6rem;      /* Ensure anchor scroll stops below navbar */
+  text-align: justify;
 }
 
 .section {
