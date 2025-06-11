@@ -8,6 +8,7 @@ body {
   padding: 0;
   background-color: #fdfdfd;
   color: #0d1368;
+  
 }
 
 header {
@@ -230,8 +231,25 @@ footer .contact-item a {
     font-size: 1.5rem;
   }
 
-  nav ul {
+  nav {
     flex-direction: column;
-    align-items: center;
+    gap: 1rem;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  .project-toggle {
+    font-size: 0.95rem;
+  }
+
+  .project-details {
+    font-size: 0.9rem;
+  }
+
+  .skills-list .label {
+    min-width: 100px;
+    font-size: 0.9rem;
   }
 }
