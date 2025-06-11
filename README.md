@@ -21,5 +21,5 @@ It serves as a platform to showcase the work I've done and the journey I'm on as
 
  ## Connect With Me
 - Email: athira200123ak@gmail.com
-- LinkedIn: linkedin.com/in/athira-ak
-- GitHub: github.com/aathira23
+- LinkedIn: https://www.linkedin.com/in/athira-ak/
+- GitHub: https://github.com/aathira23
